@@ -1,0 +1,8 @@
+	Pada program ini, kami menawarkan program untuk menjadi tourist yang sedang berlibur ke luar kota.
+Kami menawarkan berbagai macam fitur untuk merasakan bagaimana menjadi tourist di salah satu kota terkenal 
+di dunia, dimulai dari informasi tentang sejarah kota, rekomendasi wisata, kuliner, budaya, bahasa,
+dan link untuk merasakan jalan-jalan virtual di kota yang ingin ada tuju!
+    Tentunya program cocok untuk anda yang sedang merasa bosan di rumah karena dampak pandemi covid-19 dan belum
+bisa liburan keluar kota.
+
+Program ini akan dikenakan biaya sebesar Rp. 5.000.
