@@ -122,48 +122,60 @@ def merchandise ():
     j = "Magnet Kulkas Rp 10.000"
 
     # Menampilkan harga merchandise
-    pilkaos_1 = 65.000
-    pilkaos_2 = 65.000
-    pilkaos_3 = 65.000
-    tumblr = 35.000
-    ganci = 30.000
-    pilsweater_1 = 75.000
-    pilsweater_2 = 139.500
-    pilmin_1 = 124.000
-    pilmin_2 = 227.000
-    magnet = 10.000
+    pilkaos_1 = 65000
+    pilkaos_2 = 65000
+    pilkaos_3 = 65000
+    tumblr = 35000
+    ganci = 30000
+    pilsweater_1 = 75000
+    pilsweater_2 = 139500
+    pilmin_1 = 124000
+    pilmin_2 = 227000
+    magnet = 10000
 
     merch = input("Merchandise yang dipilih : ")
-    if merch == a:
-        print(pilkaos_1)
-    elif merch == b:
-        print(pilkaos_2)
-    elif merch == c:
-        print(pilkaos_3)
-    elif merch == d:
-        print(tumblr)
-    elif merch == e:
-        print(ganci)
-    elif merch == f:
-        print(pilsweater_1)
-    elif merch == g:
-        print(pilsweater_2)
-    elif merch == h:
-        print(pilmin_1)
+    if merch == 'a':
+        print("Harga merchandise = Rp ", pilkaos_1)
+        total1 = pilkaos_1
+    elif merch == 'b':
+        print("Harga merchandise = Rp ", pilkaos_2)
+        total1 = pilkaos_2
+    elif merch == 'c':
+        print("Harga merchandise = Rp ", pilkaos_3)
+        total1 = pilkaos_3
+    elif merch == 'd':
+        print("Harga merchandise = Rp ", tumblr)
+        total1 = tumblr
+    elif merch == 'e':
+        print("Harga merchandise = Rp ", ganci)
+        total1 = ganci
+    elif merch == 'f':
+        print("Harga merchandise = Rp ", pilsweater_1)
+        total1 = pilsweater_1
+    elif merch == 'g':
+        print("Harga merchandise = Rp ", pilsweater_2)
+        total1 = pilsweater_2
+    elif merch == 'h':
+        print("Harga merchandise = Rp ", pilmin_1)
+        total1 = pilmin_1
     elif merch == i:
-        print(pilmin_2)
+        print("Harga merchandise = Rp ", pilmin_2)
+        total1 = pilmin_2
     elif merch == j:
-        print(magnet)
+        print("Harga merchandise = Rp ", magnet)
+        total1 = magnet
+    else :
+        print('Item tidak ada!')
+        exit()
 
     # Menampilkan total pembayaran
-    total1 = int(merch)
-    promo = total1 * 10 / 100
-    total2 = int(total1) - promo
+    promo = int(total1 * (10 / 100))
+    total2 = total1 - promo
 
-    if total1 >= '100.000' :
-        print("Total yang harus dibayar adalah : ", total2)
+    if total1 >= 100000 :
+        print("Total yang harus dibayar adalah : Rp ", total2)
     else:
-        print("Total yang harus dibayar adalah : ", total1)
+        print("Total yang harus dibayar adalah : Rp ", total1)
 
 def yakin1 ():
     print('Apakah anda yakin untuk mengunjungi kota tersebut? (Y/T)')
@@ -175,7 +187,7 @@ def yakin1 ():
         if bmerch == "Y" or bmerch == "y":
             merchandise()
         else:
-            print("Total belanja anda 5.000")
+            print("Total pembayaran anda 5.000")
             print()
     elif yakin1=='T' or yakin1=='t':
         infokotaawal()
