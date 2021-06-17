@@ -855,3 +855,440 @@ def merchandise ():
     print("--- Diskon 10 % untuk pembelian merchandise lebih dari Rp 100.000 ---")
     print()
     pilihan()
+
+def pilihan():
+    # Menampilkan pilihan merchandise yang akan dibeli oleh pengunjung
+    a = "T-Shirt Los Angeles Kings Catton Combed Black Rp 65.000"
+    b = "T Shirt World Series Catton Combed Black Rp 65.000"
+    c = "T Shirt Sushi Taste Catton Combed Black Rp 65.000"
+    d = "Sweater Crewneck Basic Black and white Rp 75.000"
+    e = "Sweater Crewneck Colorful Rp 139.500"
+    f = "Tumblr Rp 25.000"
+    g = "Magnet Kulkas Rp 10.000"
+    h = "Souvenir Gantungan Kunci Menara Eiffel Paris Rp 30.000"
+    i = "Miniatur Big Ben England 30 cm Rp 124.000"
+    j = "Miniatur Bus London Rp 227.000"
+
+    # Menampilkan harga merchandise
+    pilkaos_1 = 65000
+    pilkaos_2 = 65000
+    pilkaos_3 = 65000
+    pilsweater_1 = 75000
+    pilsweater_2 = 139500
+    tumblr = 25000
+    magnet = 10000
+    ganci = 30000
+    mini_1 = 124000
+    mini_2 = 227000
+
+    #alamat ongkir
+    ongkir_l = 5000
+    ongkir_s = 7000
+    ongkir_b = 9000
+    ongkir_pk = 11000
+    ongkir_j = 13000
+
+
+#pemilihan merhendise
+    global bayar
+    global pilih
+    global harga
+
+    merch = input("Merchandise yang dipilih : ")
+    if merch == "a":
+        pilih = pilkaos_1
+        print(pilkaos_1)
+        #alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "b":
+        pilih = pilkaos_2
+        print(pilkaos_2)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "c":
+        pilih = pilkaos_3
+        print(pilkaos_3)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "d":
+        pilih = pilsweater_1
+        print(pilsweater_1)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "e":
+        total1 = pilsweater_2
+        print(pilsweater_2)
+        print('-----------------Selamat anda mendapatkan promo 10%-----------------')
+        promo = int(total1) * 10 / 100
+        pilih = round(int(total1) - promo)
+        print('Total belanja anda adalah', pilih)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "f":
+        pilih = tumblr
+        print(tumblr)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "g":
+        pilih = magnet
+        print(magnet)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "h":
+        pilih = ganci
+        print(ganci)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "i":
+        total1 = mini_1
+        print(mini_1)
+        print('-----------------Selamat anda mendapatkan promo 10%-----------------')
+        promo = int(total1) * 10 / 100
+        pilih = round(int(total1) - promo)
+        print('Total belanja anda adalah', pilih)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    elif merch == "j":
+        total1 = mini_2
+        print(mini_2)
+        print('-----------------Selamat anda mendapatkan promo 10%-----------------')
+        promo = int(total1) * 10 / 100
+        pilih = round(int(total1) - promo)
+        print('Total belanja anda adalah', pilih)
+        # alamat ongkir
+        print()
+        print('barang anda akan diantarkan hanya jika berada di kota solo')
+        rumah = input("Masukan alamat rumah anda : ")
+        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if alamat == "Laweyan":
+            bayar = ongkir_l + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Jebres":
+            bayar = ongkir_j + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Pasar Kliwon":
+            bayar = ongkir_pk + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Banjarsari":
+            bayar = ongkir_b + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        elif alamat == "Serengan":
+            bayar = ongkir_s + pilih + 5000
+            print("Total yang harus dibayarkan : ", bayar)
+            metodebayar2()
+        else:
+            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            sys.exit()
+    else:
+        sys.exit()
+
+def yakin1 ():
+    print('Apakah anda yakin untuk mengunjungi kota tersebut? (Y/T)')
+    yakin1 = input('= ')
+    print()
+    if yakin1=='Y' or yakin1=='y':
+        print('Apakah anda ingin membeli merchandise? (Y/T)')
+        bmerch = input('= ')
+        if bmerch == "Y" or bmerch == "y":
+            merchandise()
+        else:
+            metodebayar1()
+            struk()
+            infokota()
+    elif yakin1=='T' or yakin1=='t':
+        infokotaawal()
+    else:
+        print('MAAF DATA TIDAK VALID')
+        print()
+        sys.exit()
+
+def metodebayar1():
+    global bayar
+    print("Pilih Metode Pembayaran Website (Rp. 5000)\n"
+              "[1] Gopay\n"
+              "[2] Bank Mandiri\n"
+              "[3] OVO\n")
+    bayar = int(input('>>'))
+    if bayar == 1:
+        struk()
+    elif bayar == 2:
+        struk()
+    else:
+        struk()
+
+def infokotaawal ():
+    print('Kota apa yang akan anda kunjungi?')
+    print('1. London')
+    print('2. Paris')
+    print('3. Tokyo')
+    print('4. Moscow')
+    print('5. New York')
+    kotaawal = input('Masukkan No. kota yang akan dikunjungi : ')
+    if kotaawal == '1':
+        print('>>London')
+        S_london = open("S_london.txt", "r")
+        print(S_london.read())
+        yakin1()
+    elif kotaawal == '2':
+        print('>>Paris')
+        S_paris = open("S_paris.txt", "r")
+        print(S_paris.read())
+        yakin1()
+    elif kotaawal == '3':
+        print('>>Tokyo')
+        S_tokyo = open("S_tokyo.txt", "r")
+        print(S_tokyo.read())
+        yakin1()
+    elif kotaawal == '4':
+        print('>>Moscow')
+        S_moscow = open("S_moscow.txt", "r")
+        print(S_moscow.read())
+        yakin1()
+    elif kotaawal == '5':
+        print('>>New York')
+        S_ny = open("S_ny.txt", "r")
+        print(S_ny.read())
+        yakin1()
+    else :
+        print('MAAF DATA TIDAK VALID')
+        print()
+        infokotaawal ()
+infokotaawal()
