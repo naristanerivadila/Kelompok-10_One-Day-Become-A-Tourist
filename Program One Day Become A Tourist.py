@@ -680,3 +680,178 @@ def infokota():
         print('MAAF DATA TIDAK VALID')
         print()
         infokota()
+
+# Input data Pengguna
+def datapengguna ():
+    print('                 INFORMASI PENGGUNA')
+    nama     = input('Masukkan nama lengkap Anda               : ')
+    for name in nama:
+        if name.isdigit():
+            print("Tolong Masukan Dengan Huruf")
+            datapengguna()
+    jk       = input('Masukkan jenis kelamin Anda (P/L)        : ')
+    nohp     = input('Masukkan No HP pengguna                 : +62 ')
+    ttinggal = input('Masukkan alamat anda                     : ')
+    print()
+    print('======================================================')
+    print()
+    if jk == 'L' or jk == 'l':
+        print("Selamat Datang, Tuan", nama, "!")
+        info1 = open("info1.txt", "r")
+        print(info1.read())
+    else:
+        print("Selamat Datang, Nyonya", nama, "!")
+        info1 = open("info1.txt", "r")
+        print(info1.read())
+datapengguna ()
+
+# info kota awal 2
+def infokotaawal2 ():
+    print('Kota apa yang akan anda kunjungi?')
+    print('1. London')
+    print('2. Paris')
+    print('3. Tokyo')
+    print('4. Moscow')
+    print('5. New York')
+    kotaawal = input('Masukkan No. kota yang akan dikunjungi : ')
+    if kotaawal == '1':
+        print('>>London')
+        S_london = open("S_london.txt", "r")
+        print(S_london.read())
+        yakin1()
+    elif kotaawal == '2':
+        print('>>Paris')
+        S_paris = open("S_paris.txt", "r")
+        print(S_paris.read())
+        yakin1()
+    elif kotaawal == '3':
+        print('>>Tokyo')
+        S_tokyo = open("S_tokyo.txt", "r")
+        print(S_tokyo.read())
+        yakin1()
+    elif kotaawal == '4':
+        print('>>Moscow')
+        S_moscow = open("S_moscow.txt", "r")
+        print(S_moscow.read())
+        yakin1()
+    elif kotaawal == '5':
+        print('>>New York')
+        S_ny = open("S_ny.txt", "r")
+        print(S_ny.read())
+        yakin1()
+    else :
+        print('MAAF DATA TIDAK VALID')
+        print()
+        infokotaawal2 ()
+
+def struk():
+    #kode pelunasan
+    lunas = random.randrange(55555, 77777, 10)
+    print("Kode Pembayaran anda adalah", lunas)
+    print("Silahkan membayar ke No. Akun tersebut")
+    print()
+    while True:
+        bayarr = int(input("Masukan Kode Pelunasan: "))
+        if bayarr == lunas:
+            print("Pembayaran Dengan No Akun", bayarr, "Berhasil. \n Hubungi Admin Jika Ada Kendala")
+            break
+        else:
+            print("Maaf, Kode Pelunasan Salah!")
+
+    # Menampilkan struk
+    nama = input('Masukkan nama lengkap Anda               : ')
+    jk = input('Masukkan jenis kelamin Anda (P/L)        : ')
+    nohp = input('Masukkan No HP pengguna                  : +62 ')
+    ttinggal = input('Masukkan alamat anda                     : ')
+
+    print()
+    print('======================================================')
+    print("                 STRUK PEMBELIAN")
+    print('======================================================')
+    print()
+    print(" Nama                :", nama)
+    print(" Jenis Kelamin       :", jk)
+    print(" Nomor HP            :", nohp)
+    print(" Alamat              :", ttinggal)
+    print(" Kode Pembayaran     :", bayarr)
+    print(" Nominal Bayar       : Rp. 5.000")
+    print("==============================================================")
+    print("                        TERIMA KASIH                          ")
+    print("==============================================================")
+    infokota()
+
+#merchandise
+def strukbeli():
+    #kode pelunasan
+    print()
+    lunas = random.randrange(55555, 77777, 10)
+    print("Kode Pembayaran anda adalah", lunas)
+    print("Silahkan membayar ke No. Akun tersebut")
+    while True:
+        print()
+        bayarr = int(input("Masukan Kode Pelunasan: "))
+        if bayarr == lunas:
+            print("Pembayaran Dengan No Akun", bayarr, "Berhasil. \n Hubungi Admin Jika Ada Kendala")
+            break
+        else:
+            print("Maaf, Kode Pelunasan Salah!")
+
+    # Menampilkan struk
+    print()
+    print('----------MENGISI DATA PEMBELI----------')
+    nama = input('Masukkan nama lengkap Anda               : ')
+    jk = input('Masukkan jenis kelamin Anda (P/L)        : ')
+    nohp = input('Masukkan No HP pengguna                  : +62 ')
+    ttinggal = input('Masukkan alamat anda                     : ')
+
+    print()
+    print('======================================================')
+    print("                 STRUK PEMBELIAN")
+    print('======================================================')
+    print()
+    print(" Nama                : ", nama)
+    print(" Jenis Kelamin       : ", jk)
+    print(" Nomor HP            : +62", nohp)
+    print(" Alamat              : ", ttinggal)
+    print(" Metode Pembayaran   : ", bayarr)
+    print(" Nominal Bayar       : Rp.", tbayar)
+    print("==============================================================")
+    print("                        TERIMA KASIH                          ")
+    print("==============================================================")
+    print()
+    print("Terimakasih pesanan akan dikirim\n"
+          "Apabila belum terkirim dapat hubungi admin.")
+    infokota()
+
+def metodebayar2():
+    global tbayar
+
+    print("Pilih Metode Pembayaran\n"
+              "[1] Gopay\n"
+              "[2] Bank Mandiri\n"
+              "[3] OVO\n")
+    bayar = int(input('>>'))
+    if bayar == 1:
+        tbayar = int(input('Masukkan total nominal pembelajaan ke rekening yg telah disediakan : '))
+        strukbeli()
+    elif bayar == 2:
+        tbayar = int(input('Masukkan total nominal pembelajaan ke rekening yg telah disediakan : '))
+        strukbeli()
+    else:
+        tbayar = int(input('Masukkan total nominal pembelajaan ke rekening yg telah disediakan : '))
+        strukbeli()
+
+def merchandise ():
+    # Menampilkan katalog merchandise dan promo
+    print()
+    print('======================================================')
+    print("                 KATALOG MERCHANDISE")
+    print('======================================================')
+    print()
+    merch = open("merch.txt", "r")
+    print(merch.read())
+
+    # Menampilkan informasi promo
+    print("--- Diskon 10 % untuk pembelian merchandise lebih dari Rp 100.000 ---")
+    print()
+    pilihan()
