@@ -1,5 +1,5 @@
-#KELOMPOK 10
-#TUGAS BESAR PROGRAMA KOMPUTER 2021
+# KELOMPOK 10
+# TUGAS BESAR PROGRAMA KOMPUTER 2021
 
 import sys
 import datetime
@@ -9,7 +9,7 @@ import matplotlib.image as mpimg
 import random
 
 # Menu Tampilan Awal
-def menu ():
+def menu():
     print()
     print('                       ONE DAY')
     print('                   become a TOURIST')
@@ -19,10 +19,10 @@ def menu ():
     print('     yang paling terkenal di dunia secara online.')
     print('======================================================')
     print()
-menu ()
+menu()
 
-#info kota
-def menuinfolondon ():
+# Info Kota London
+def menuinfolondon():
     print()
     print('>>MENU INFORMASI<<')
     print('1. Sejarah Kota')
@@ -35,50 +35,59 @@ def menuinfolondon ():
     menu = input('Masukkan No. menu yang akan anda pilih : ')
     print()
     if menu == '1':
+        # Sejarah Kota London
         london_sk = open("london_sk.txt", "r")
         print(london_sk.read())
         menuinfolondon()
     elif menu == '2':
+        # Rekomendasi Wisata Kota London
         london_rw = open("london_rw.txt", "r")
         print(london_rw.read())
         menuinfolondon()
     elif menu == '3':
+        # Bahasa Kota London
         london_b = open("london_b.txt", "r")
         print(london_b.read())
         menuinfolondon()
     elif menu == '4':
+        # Kuliner Kota London
         london_k = open("london_k.txt", "r")
         print(london_k.read())
         menuinfolondon()
     elif menu == '5':
+        # Perbedaan Waktu Kota London
         print('waktu anda sekarang jika berada di kota London ialah : ')
         print()
-        # gaperlu input lagi waktunya langsung convert aja nanti di output jamnya
+
+        # Program mengecek waktu pengguna sekarang
         waktu_saya = datetime.datetime.now()
 
-        # masukin variabel timezonenya yg lama sama baru
+        # Masukan variabel timezone
         timezone_lama = pytz.timezone("Asia/Jakarta")
         timezone_baru = pytz.timezone("Europe/London")
 
-        # two-step process
+        # Two-step process
         localized_timestamp = timezone_lama.localize(waktu_saya)
         new_timezone_timestamp = localized_timestamp.astimezone(timezone_baru)
         print(f"waktu WIB - London adalah {new_timezone_timestamp}")
         menuinfolondon()
     elif menu == '6':
+        # Jalan-jalan Virtual melalui web drive and listen
         print('Untuk menikmati jalan-jalan virtual, ')
         print('silahkan copy-paste link ini ke web anda')
         print('https://driveandlisten.herokuapp.com/')
         print()
         menuinfolondon()
     elif menu == '7':
+        # Keluar Program
         print('Terimakasih telah mengunjungi program kami')
         sys.exit()
     else:
         print('MAAF DATA TIDAK VALID')
         print()
-        infokota()
+        menuinfolondon()
 
+# Info Kota Paris
 def menuinfoparis():
     print()
     print('>>MENU INFORMASI<<')
@@ -92,6 +101,7 @@ def menuinfoparis():
     menu = input('Masukkan No. menu yang akan anda pilih : ')
     print()
     if menu == '1':
+        # Sejarah Kota Paris
         paris_sk = open("paris_sk.txt", "r")
         print(paris_sk.read())
         img = mpimg.imread('paris_sk.jpg')
@@ -99,6 +109,7 @@ def menuinfoparis():
         plt.show()
         menuinfoparis()
     elif menu == '2':
+        # Rekomendasi Wisata Kota Paris
         paris_rw = open("paris_rw.txt", "r")
         print(paris_rw.read())
         img = mpimg.imread('paris_rw.jpg')
@@ -106,10 +117,12 @@ def menuinfoparis():
         plt.show()
         menuinfoparis()
     elif menu == '3':
+        # Bahasa Kota Paris
         paris_b = open("paris_b.txt", "r")
         print(paris_b.read())
         menuinfoparis()
     elif menu == '4':
+        # Kuliner Kota Paris
         paris_k = open("paris_k.txt", "r")
         print(paris_k.read())
         img = mpimg.imread('paris_k.jpg')
@@ -117,12 +130,14 @@ def menuinfoparis():
         plt.show()
         menuinfoparis()
     elif menu == '5':
+        # Perbedaan Waktu Kota Paris
         print('waktu anda sekarang jika berada di kota paris ialah : ')
         print()
-        # gaperlu input lagi waktunya langsung convert aja nanti di output jamnya
+
+        # Program mengecek waktu pengguna sekarang
         waktu_saya = datetime.datetime.now()
 
-        # masukin variabel timezonenya yg lama sama baru
+        # Masukan variabel timezone
         timezone_lama = pytz.timezone("Asia/Jakarta")
         timezone_baru = pytz.timezone("Europe/Paris")
 
@@ -132,20 +147,23 @@ def menuinfoparis():
         print(f"waktu WIB - Paris adalah {new_timezone_timestamp}")
         menuinfoparis()
     elif menu == '6':
+        # Jalan-jalan Virtual melalui web drive and listen
         print('Untuk menikmati jalan-jalan virtual, ')
         print('silahkan copy-paste link ini ke web anda')
         print('https://driveandlisten.herokuapp.com/')
         print()
         menuinfoparis()
     elif menu == '7':
+        # Keluar Program
         print('Terimakasih telah mengunjungi program kami')
         sys.exit()
     else:
         print('MAAF DATA TIDAK VALID')
         print()
-        infokota()
+        menuinfoparis()
 
-def menuinfotokyo ():
+# Info Kota Tokyo
+def menuinfotokyo():
     print()
     print('>>MENU INFORMASI<<')
     print('1. Sejarah Kota')
@@ -158,6 +176,7 @@ def menuinfotokyo ():
     menu = input('Masukkan No. menu yang akan anda pilih : ')
     print()
     if menu == '1':
+        # Sejarah Kota Tokyo
         tokyo_sk = open("tokyo_sk.txt", "r")
         print(tokyo_sk.read())
         img = mpimg.imread('tokyo_sk.jpg')
@@ -165,6 +184,7 @@ def menuinfotokyo ():
         plt.show()
         menuinfotokyo()
     elif menu == '2':
+        # Rekomendasi Wisata Kota Tokyo
         tokyo_rw = open("tokyo_rw.txt", "r")
         print(tokyo_rw.read())
         img = mpimg.imread('tokyo_rw.jpg')
@@ -172,10 +192,12 @@ def menuinfotokyo ():
         plt.show()
         menuinfotokyo()
     elif menu == '3':
+        # Bahasa Kota Tokyo
         tokyo_b = open("tokyo_b.txt", "r")
         print(tokyo_b.read())
         menuinfotokyo()
     elif menu == '4':
+        # Kuliner Kota Tokyo
         tokyo_k = open("tokyo_k.txt", "r")
         print(tokyo_k.read())
         img = mpimg.imread('tokyo_k.jpg')
@@ -183,12 +205,14 @@ def menuinfotokyo ():
         plt.show()
         menuinfotokyo()
     elif menu == '5':
+        # Perbedaan Waktu Kota Tokyo
         print('waktu anda sekarang jika berada di kota tokyo ialah : ')
         print()
-        # gaperlu input lagi waktunya langsung convert aja nanti di output jamnya
+
+        # Program mengecek waktu pengguna sekarang
         waktu_saya = datetime.datetime.now()
 
-        # masukin variabel timezonenya yg lama sama baru
+        # Masukan variabel timezone
         timezone_lama = pytz.timezone("Asia/Jakarta")
         timezone_baru = pytz.timezone("Asia/Tokyo")
 
@@ -198,19 +222,22 @@ def menuinfotokyo ():
         print(f"waktu WIB - Tokyo adalah {new_timezone_timestamp}")
         menuinfotokyo()
     elif menu == '6':
+        # Jalan-jalan Virtual melalui web drive and listen
         print('Untuk menikmati jalan-jalan virtual, ')
         print('silahkan copy-paste link ini ke web anda')
         print('https://driveandlisten.herokuapp.com/')
         print()
         menuinfotokyo()
     elif menu == '7':
+        # Keluar Program
         print('Terimakasih telah mengunjungi program kami')
         sys.exit()
     else:
         print('MAAF DATA TIDAK VALID')
         print()
-        infokota()
+        menuinfotokyo()
 
+# Info Kota Moscow
 def menuinfomoscow():
     print()
     print('>>MENU INFORMASI<<')
@@ -224,6 +251,7 @@ def menuinfomoscow():
     menu = input('Masukkan No. menu yang akan anda pilih : ')
     print()
     if menu == '1':
+        # Sejarah Kota Moscow
         moscow_sk = open("moscow_sk.txt", "r")
         print(moscow_sk.read())
         img = mpimg.imread('moskow_sk.jpg')
@@ -231,6 +259,7 @@ def menuinfomoscow():
         plt.show()
         menuinfomoscow()
     elif menu == '2':
+        # Rekomendasi Wisata Kota Moscow
         moscow_rw = open("moscow_rw.txt", "r")
         print(moscow_rw.read())
         img = mpimg.imread('moskow_rw.jpg')
@@ -238,10 +267,12 @@ def menuinfomoscow():
         plt.show()
         menuinfomoscow()
     elif menu == '3':
+        # Bahasa Kota Moscow
         moscow_b = open("moscow_b.txt", "r")
         print(moscow_b.read())
         menuinfomoscow()
     elif menu == '4':
+        # Kuliner Kota Moscow
         moscow_k = open("moscow_k.txt", "r")
         print(moscow_k.read())
         img = mpimg.imread('moskow_k.jpg')
@@ -249,12 +280,14 @@ def menuinfomoscow():
         plt.show()
         menuinfomoscow()
     elif menu == '5':
+        # Perbedaan Waktu Kota Moscow
         print('waktu anda sekarang jika berada di kota moscow ialah : ')
         print()
-        # gaperlu input lagi waktunya langsung convert aja nanti di output jamnya
+
+        # Program mengecek waktu pengguna sekarang
         waktu_saya = datetime.datetime.now()
 
-        # masukin variabel timezonenya yg lama sama baru
+        # Masukan variabel timezone
         timezone_lama = pytz.timezone("Asia/Jakarta")
         timezone_baru = pytz.timezone("Europe/Moscow")
 
@@ -264,19 +297,22 @@ def menuinfomoscow():
         print(f"waktu WIB - Moscow adalah {new_timezone_timestamp}")
         menuinfomoscow()
     elif menu == '6':
+        # Jalan-jalan Virtual melalui web drive and listen
         print('Untuk menikmati jalan-jalan virtual, ')
         print('silahkan copy-paste link ini ke web anda')
         print('https://driveandlisten.herokuapp.com/')
         print()
         menuinfomoscow()
     elif menu == '7':
+        # Keluar Program
         print('Terimakasih telah mengunjungi program kami')
         sys.exit()
     else:
         print('MAAF DATA TIDAK VALID')
         print()
-        infokota()
+        menuinfomoscow()
 
+# Info Kota New York
 def menuinfony():
     print()
     print('>>MENU INFORMASI<<')
@@ -290,6 +326,7 @@ def menuinfony():
     menu = input('Masukkan No. menu yang akan anda pilih : ')
     print()
     if menu == '1':
+        # Sejarah Kota New York
         ny_sk = open("ny_sk.txt", "r")
         print(ny_sk.read())
         img = mpimg.imread('ny_sk.jpg')
@@ -297,6 +334,7 @@ def menuinfony():
         plt.show()
         menuinfony()
     elif menu == '2':
+        # Rekomendasi Wisata Kota New York
         ny_rw = open("ny_rw.txt", "r")
         print(ny_rw.read())
         img = mpimg.imread('ny_rw.jpg')
@@ -304,10 +342,12 @@ def menuinfony():
         plt.show()
         menuinfony()
     elif menu == '3':
+        # Bahasa Kota New York
         ny_b = open("ny_b.txt", "r")
         print(ny_b.read())
         menuinfony()
     elif menu == '4':
+        # Kuliner Kota New York
         ny_k = open("ny_k.txt", "r")
         print(ny_k.read())
         img = mpimg.imread('ny_k.jpg')
@@ -315,12 +355,14 @@ def menuinfony():
         plt.show()
         menuinfony()
     elif menu == '5':
+        # Perbedaan Waktu Kota New York
         print('waktu anda sekarang jika berada di Kota New York ialah : ')
         print()
-        # gaperlu input lagi waktunya langsung convert aja nanti di output jamnya
+
+        # Program mengecek waktu pengguna sekarang
         waktu_saya = datetime.datetime.now()
 
-        # masukin variabel timezonenya yg lama sama baru
+        # Masukan variabel timezone
         timezone_lama = pytz.timezone("Asia/Jakarta")
         timezone_baru = pytz.timezone("America/New_York")
 
@@ -330,19 +372,22 @@ def menuinfony():
         print(f"waktu WIB - New York adalah {new_timezone_timestamp}")
         menuinfony()
     elif menu == '6':
+        # Jalan-jalan Virtual melalui web drive and listen
         print('Untuk menikmati jalan-jalan virtual, ')
         print('silahkan copy-paste link ini ke web anda')
         print('https://driveandlisten.herokuapp.com/')
         print()
         menuinfony()
     elif menu == '7':
+        # Keluar Program
         print('Terimakasih telah mengunjungi program kami')
         sys.exit()
     else:
         print('MAAF DATA TIDAK VALID')
         print()
-        infokota()
+        menuinfony()
 
+# Menu Info Kota
 def infokota():
     print()
     print("-----SELAMAT ANDA TELAH DAPAT MENGAKSES PROGRAM ONE DAY BECOME A TOURIST-----")
@@ -676,22 +721,27 @@ def infokota():
             print('MAAF DATA TIDAK VALID')
             print()
             infokota()
-    else :
+    else:
         print('MAAF DATA TIDAK VALID')
         print()
         infokota()
 
 # Input data Pengguna
-def datapengguna ():
+def datapengguna():
+    global nama
+    global jk
+    global nohp
+    global rumah
+
     print('                 INFORMASI PENGGUNA')
-    nama     = input('Masukkan nama lengkap Anda               : ')
+    nama = input('Masukkan nama lengkap Anda               : ')
     for name in nama:
         if name.isdigit():
             print("Tolong Masukan Dengan Huruf")
             datapengguna()
-    jk       = input('Masukkan jenis kelamin Anda (P/L)        : ')
-    nohp     = input('Masukkan No HP pengguna                 : +62 ')
-    ttinggal = input('Masukkan alamat anda                     : ')
+    jk = input('Masukkan jenis kelamin Anda (P/L)        : ')
+    nohp = input('Masukkan No HP pengguna                  : +62 ')
+    rumah = input('Masukkan alamat anda                     : ')
     print()
     print('======================================================')
     print()
@@ -703,10 +753,10 @@ def datapengguna ():
         print("Selamat Datang, Nyonya", nama, "!")
         info1 = open("info1.txt", "r")
         print(info1.read())
-datapengguna ()
+datapengguna()
 
-# info kota awal 2
-def infokotaawal2 ():
+# Menu Info Deskripsi Kota Awal
+def infokotaawal2():
     print('Kota apa yang akan anda kunjungi?')
     print('1. London')
     print('2. Paris')
@@ -716,40 +766,42 @@ def infokotaawal2 ():
     kotaawal = input('Masukkan No. kota yang akan dikunjungi : ')
     if kotaawal == '1':
         print('>>London')
-        S_london = open("S_london.txt", "r")
-        print(S_london.read())
+        s_london = open("S_london.txt", "r")
+        print(s_london.read())
         yakin1()
     elif kotaawal == '2':
         print('>>Paris')
-        S_paris = open("S_paris.txt", "r")
-        print(S_paris.read())
+        s_paris = open("S_paris.txt", "r")
+        print(s_paris.read())
         yakin1()
     elif kotaawal == '3':
         print('>>Tokyo')
-        S_tokyo = open("S_tokyo.txt", "r")
-        print(S_tokyo.read())
+        s_tokyo = open("S_tokyo.txt", "r")
+        print(s_tokyo.read())
         yakin1()
     elif kotaawal == '4':
         print('>>Moscow')
-        S_moscow = open("S_moscow.txt", "r")
-        print(S_moscow.read())
+        s_moscow = open("S_moscow.txt", "r")
+        print(s_moscow.read())
         yakin1()
     elif kotaawal == '5':
         print('>>New York')
-        S_ny = open("S_ny.txt", "r")
-        print(S_ny.read())
+        s_ny = open("S_ny.txt", "r")
+        print(s_ny.read())
         yakin1()
-    else :
+    else:
         print('MAAF DATA TIDAK VALID')
         print()
-        infokotaawal2 ()
+        infokotaawal2()
 
+# Struk Pelunasan Web
 def struk():
-    #kode pelunasan
+    # kode pelunasan
     lunas = random.randrange(55555, 77777, 10)
     print("Kode Pembayaran anda adalah", lunas)
     print("Silahkan membayar ke No. Akun tersebut")
     print()
+
     while True:
         bayarr = int(input("Masukan Kode Pelunasan: "))
         if bayarr == lunas:
@@ -758,21 +810,16 @@ def struk():
         else:
             print("Maaf, Kode Pelunasan Salah!")
 
-    # Menampilkan struk
-    nama = input('Masukkan nama lengkap Anda               : ')
-    jk = input('Masukkan jenis kelamin Anda (P/L)        : ')
-    nohp = input('Masukkan No HP pengguna                  : +62 ')
-    ttinggal = input('Masukkan alamat anda                     : ')
-
+    # Template Struk
     print()
-    print('======================================================')
-    print("                 STRUK PEMBELIAN")
-    print('======================================================')
+    print('==============================================================')
+    print("                      STRUK PEMBELIAN")
+    print('==============================================================')
     print()
     print(" Nama                :", nama)
     print(" Jenis Kelamin       :", jk)
     print(" Nomor HP            :", nohp)
-    print(" Alamat              :", ttinggal)
+    print(" Alamat              :", rumah)
     print(" Kode Pembayaran     :", bayarr)
     print(" Nominal Bayar       : Rp. 5.000")
     print("==============================================================")
@@ -780,13 +827,14 @@ def struk():
     print("==============================================================")
     infokota()
 
-#merchandise
+# Struk Pelunasan Merchendise
 def strukbeli():
-    #kode pelunasan
+    # kode pelunasan
     print()
     lunas = random.randrange(55555, 77777, 10)
     print("Kode Pembayaran anda adalah", lunas)
     print("Silahkan membayar ke No. Akun tersebut")
+
     while True:
         print()
         bayarr = int(input("Masukan Kode Pelunasan: "))
@@ -798,23 +846,23 @@ def strukbeli():
 
     # Menampilkan struk
     print()
-    print('----------MENGISI DATA PEMBELI----------')
-    nama = input('Masukkan nama lengkap Anda               : ')
-    jk = input('Masukkan jenis kelamin Anda (P/L)        : ')
-    nohp = input('Masukkan No HP pengguna                  : +62 ')
-    ttinggal = input('Masukkan alamat anda                     : ')
+    print('----------MENGISI DATA PENERIMA BARANG----------')
+    nama_penerima = input('Masukkan nama lengkap                : ')
+    jk_penerima = input('Masukkan jenis kelamin (P/L)         : ')
+    nohp_penerima = input('Masukkan No HP pengguna              : +62 ')
 
+    # Template Struk
     print()
-    print('======================================================')
-    print("                 STRUK PEMBELIAN")
-    print('======================================================')
+    print('==============================================================')
+    print("                      STRUK PEMBELIAN")
+    print('==============================================================')
     print()
-    print(" Nama                : ", nama)
-    print(" Jenis Kelamin       : ", jk)
-    print(" Nomor HP            : +62", nohp)
-    print(" Alamat              : ", ttinggal)
+    print(" Nama                : ", nama_penerima)
+    print(" Jenis Kelamin       : ", jk_penerima)
+    print(" Nomor HP            :  +62", nohp_penerima)
+    print(" Alamat              : ", rumah_penerima, ",", kecamatan, ", Solo")
     print(" Metode Pembayaran   : ", bayarr)
-    print(" Nominal Bayar       : Rp.", tbayar)
+    print(" Nominal Bayar       :  Rp.", bayar)
     print("==============================================================")
     print("                        TERIMA KASIH                          ")
     print("==============================================================")
@@ -823,25 +871,36 @@ def strukbeli():
           "Apabila belum terkirim dapat hubungi admin.")
     infokota()
 
+# Menu Opsi Pembayaran Merchandise
 def metodebayar2():
-    global tbayar
-
     print("Pilih Metode Pembayaran\n"
               "[1] Gopay\n"
               "[2] Bank Mandiri\n"
               "[3] OVO\n")
+
+    # Pengguna memilih metode pembayaran
     bayar = int(input('>>'))
     if bayar == 1:
-        tbayar = int(input('Masukkan total nominal pembelajaan ke rekening yg telah disediakan : '))
+        print('silahkan lakukan pembayaran ke akun gopay kami')
+        print('081563184352 A.N. Raka')
+        print('lalu diikuti dengan 5 digit kode pembayaran')
+        print('contoh 081563184352-55555')
         strukbeli()
     elif bayar == 2:
-        tbayar = int(input('Masukkan total nominal pembelajaan ke rekening yg telah disediakan : '))
+        print('silahkan lakukan pembayaran ke rekening mandiri kami')
+        print('720839214 A.N. Hasan')
+        print('lalu diikuti dengan 5 digit kode pembayaran')
+        print('contoh 720839214-55555')
         strukbeli()
     else:
-        tbayar = int(input('Masukkan total nominal pembelajaan ke rekening yg telah disediakan : '))
+        print('silahkan lakukan pembayaran ke rekening mandiri kami')
+        print('081567878985 A.N. Narista')
+        print('lalu diikuti dengan 5 digit kode pembayaran')
+        print('contoh 081567878985-55555')
         strukbeli()
 
-def merchandise ():
+# Menu Merchandise
+def merchandise():
     # Menampilkan katalog merchandise dan promo
     print()
     print('======================================================')
@@ -857,19 +916,13 @@ def merchandise ():
     pilihan()
 
 def pilihan():
-    # Menampilkan pilihan merchandise yang akan dibeli oleh pengunjung
-    a = "T-Shirt Los Angeles Kings Catton Combed Black Rp 65.000"
-    b = "T Shirt World Series Catton Combed Black Rp 65.000"
-    c = "T Shirt Sushi Taste Catton Combed Black Rp 65.000"
-    d = "Sweater Crewneck Basic Black and white Rp 75.000"
-    e = "Sweater Crewneck Colorful Rp 139.500"
-    f = "Tumblr Rp 25.000"
-    g = "Magnet Kulkas Rp 10.000"
-    h = "Souvenir Gantungan Kunci Menara Eiffel Paris Rp 30.000"
-    i = "Miniatur Big Ben England 30 cm Rp 124.000"
-    j = "Miniatur Bus London Rp 227.000"
+    global bayar
+    global pilih
+    global harga
+    global rumah_penerima
+    global kecamatan
 
-    # Menampilkan harga merchandise
+    # Harga merchandise
     pilkaos_1 = 65000
     pilkaos_2 = 65000
     pilkaos_3 = 65000
@@ -881,50 +934,51 @@ def pilihan():
     mini_1 = 124000
     mini_2 = 227000
 
-    #alamat ongkir
+    # Alamat Ongkir Daerah Solo
+
+    # Kecamatan Laweyan
     ongkir_l = 5000
+    # Kecamatan Serengan
     ongkir_s = 7000
+    # Kecamatan Banjarsari
     ongkir_b = 9000
+    # Kecamatan Pasar Kliwon
     ongkir_pk = 11000
+    # Kecamatan Jebres
     ongkir_j = 13000
 
-
-#pemilihan merhendise
-    global bayar
-    global pilih
-    global harga
-
+    # Pengguna Menginput Merchandise yang akan dipilih
     merch = input("Merchandise yang dipilih : ")
     if merch == "a":
         pilih = pilkaos_1
         print(pilkaos_1)
-        #alamat ongkir
+        # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     elif merch == "b":
         pilih = pilkaos_2
@@ -932,30 +986,30 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     elif merch == "c":
         pilih = pilkaos_3
@@ -963,30 +1017,30 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     elif merch == "d":
         pilih = pilsweater_1
@@ -994,25 +1048,25 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
@@ -1029,25 +1083,25 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
@@ -1060,30 +1114,30 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     elif merch == "g":
         pilih = magnet
@@ -1091,30 +1145,30 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     elif merch == "h":
         pilih = ganci
@@ -1122,30 +1176,30 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     elif merch == "i":
         total1 = mini_1
@@ -1157,30 +1211,30 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     elif merch == "j":
         total1 = mini_2
@@ -1192,39 +1246,39 @@ def pilihan():
         # alamat ongkir
         print()
         print('barang anda akan diantarkan hanya jika berada di kota solo')
-        rumah = input("Masukan alamat rumah anda : ")
-        alamat = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
-        if alamat == "Laweyan":
+        rumah_penerima = input("Masukan alamat rumah anda : ")
+        kecamatan = input("Kecamatan (Laweyan/Jebres/Pasar Kliwon/Banjarsari/Serengan) : ")
+        if kecamatan == "Laweyan":
             bayar = ongkir_l + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Jebres":
+        elif kecamatan == "Jebres":
             bayar = ongkir_j + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Pasar Kliwon":
+        elif kecamatan == "Pasar Kliwon":
             bayar = ongkir_pk + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Banjarsari":
+        elif kecamatan == "Banjarsari":
             bayar = ongkir_b + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
-        elif alamat == "Serengan":
+        elif kecamatan == "Serengan":
             bayar = ongkir_s + pilih + 5000
             print("Total yang harus dibayarkan : ", bayar)
             metodebayar2()
         else:
-            print('Alamat yang anda cantumkan tidak dapat dideteksi')
+            print('kecamatan yang anda cantumkan tidak dapat dideteksi')
             sys.exit()
     else:
         sys.exit()
 
-def yakin1 ():
+def yakin1():
     print('Apakah anda yakin untuk mengunjungi kota tersebut? (Y/T)')
     yakin1 = input('= ')
     print()
-    if yakin1=='Y' or yakin1=='y':
+    if yakin1 == 'Y' or yakin1 == 'y':
         print('Apakah anda ingin membeli merchandise? (Y/T)')
         bmerch = input('= ')
         if bmerch == "Y" or bmerch == "y":
@@ -1233,13 +1287,14 @@ def yakin1 ():
             metodebayar1()
             struk()
             infokota()
-    elif yakin1=='T' or yakin1=='t':
+    elif yakin1 == 'T' or yakin1 == 't':
         infokotaawal()
     else:
         print('MAAF DATA TIDAK VALID')
         print()
         sys.exit()
 
+# Menu Opsi Pembayaran Web
 def metodebayar1():
     global bayar
     print("Pilih Metode Pembayaran Website (Rp. 5000)\n"
@@ -1248,13 +1303,26 @@ def metodebayar1():
               "[3] OVO\n")
     bayar = int(input('>>'))
     if bayar == 1:
+        print('silahkan lakukan pembayaran ke akun gopay kami')
+        print('081563184352 A.N. Raka')
+        print('lalu diikuti dengan 5 digit kode pembayaran')
+        print('contoh 081563184352-55555')
         struk()
     elif bayar == 2:
+        print('silahkan lakukan pembayaran ke rekening mandiri kami')
+        print('720839214 A.N. Hasan')
+        print('lalu diikuti dengan 5 digit kode pembayaran')
+        print('contoh 720839214-55555')
         struk()
     else:
+        print('silahkan lakukan pembayaran ke rekening mandiri kami')
+        print('081567878985 A.N. Narista')
+        print('lalu diikuti dengan 5 digit kode pembayaran')
+        print('contoh 081567878985-55555')
         struk()
 
-def infokotaawal ():
+# Menu Info Deskripsi Kota Awal
+def infokotaawal():
     print('Kota apa yang akan anda kunjungi?')
     print('1. London')
     print('2. Paris')
@@ -1287,8 +1355,8 @@ def infokotaawal ():
         S_ny = open("S_ny.txt", "r")
         print(S_ny.read())
         yakin1()
-    else :
+    else:
         print('MAAF DATA TIDAK VALID')
         print()
-        infokotaawal ()
+        infokotaawal()
 infokotaawal()
